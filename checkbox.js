@@ -10,7 +10,7 @@
 (function( $ ){
 	
 	var defaults = {
-		'pfx': 'checkbox'
+		'cls': 'checkbox'
 	},
 	
 	methods = {
@@ -107,7 +107,7 @@
 		}
 		
 		// create element
-		$build = $('<div class="' + data.settings.pfx + '" />');
+		$build = $('<div class="' + data.settings.cls + '" />');
 		
 		// apply css
 		$build.css ( css );
