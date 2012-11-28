@@ -161,12 +161,12 @@
 	
 	function toggle ( data, bool ) {
 		
-		var open = 'open';
+		var checked = 'checked';
 		
 		if ( bool ) {
-			data.build.addClass( open );
+			data.build.addClass( checked );
 		} else {
-			data.build.removeClass( open );
+			data.build.removeClass( checked );
 		}
 		
 	}

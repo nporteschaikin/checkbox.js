@@ -12,6 +12,6 @@
 <p><code>$(':checkbox').checkbox();</code><br />
 <p><code>$(':radio').checkbox( { cls: 'radio' } );</code><br />
 <code>
-	.checkbox { /* CSS properties for the checkbox */ }<br />
-	.checkbox.open { /* CSS properties for checkbox/radio button in open state */ }
+	.class { /* CSS properties for the checkbox/radio */ }<br />
+	.class.checked { /* CSS properties for checkbox/radio in checked state */ }
 </code></p>
