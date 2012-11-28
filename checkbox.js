@@ -1,6 +1,6 @@
 /*
 
-*	checkbox.js
+* checkbox.js
 * The easiest, most functional custom checkboxes and radio buttons around.
 * @author Noah Portes Chaikin
 * @requires jQuery 1.6+
