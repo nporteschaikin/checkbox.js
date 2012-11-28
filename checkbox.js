@@ -26,7 +26,8 @@
 							el: $( this ),
 							name: $( this ).attr( 'name' ),
 							tabindex: $( this ).attr('tabindex'),
-							settings: settings
+							settings: settings,
+							id: $( this ).attr( 'id' )
 						}
 						
 						// data
@@ -157,6 +158,20 @@
 				}
 			}
 		);
+		
+		// if input has ID, connect it's label 
+		if ( data.id.length > 0 ) {
+			
+			var label = $( 'label[for="' + data.id + '"]' );
+			label.bind( 'click',
+				function(e) {
+					e.preventDefault();
+					build.trigger( 'click' );
+				}
+			)
+			
+		}
+		
 	}
 	
 	function toggle ( data, bool ) {
