@@ -151,7 +151,7 @@
 	
 	function toggle ( data, bool ) {
 		
-		var open = data.settings.pfx + '-open';
+		var open = 'open';
 		
 		if ( bool ) {
 			data.build.addClass( open );
