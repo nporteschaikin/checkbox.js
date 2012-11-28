@@ -49,7 +49,7 @@
 						
 						// if it's selected ...
 						if ( $( this ).is(':checked') ) {
-							$build.checkbox( 'toggle' );
+							toggle( data, true );
 						}
 						
 					}
@@ -112,9 +112,11 @@
 		// apply css
 		$build.css ( css );
 		
-		// set a tabindex
+		// set a tabindex,
+		// remove tabindex from original el
 		if( data.tabindex >= 0 ) {
 			$build.attr( 'tabindex', data.tabindex );
+			data.el.removeAttr( 'tabindex' );
 		}
 		
 		// done! that was easy
@@ -147,8 +149,14 @@
 			}
 		)
 		
-		// keypresses
-		
+		// on enter, toggle
+		$( document ).bind( 'keydown.checkbox',
+			function( e ) {
+				if ( build.is(':focus') && e.which == 13 ) {
+					el.checkbox( 'toggle' );
+				}
+			}
+		);
 	}
 	
 	function toggle ( data, bool ) {
