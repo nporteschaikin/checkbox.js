@@ -70,11 +70,8 @@
 						var el = data.el,
 						build = data.build;
 						
-						if ( el.is(':checked') ) {
-							el.prop( 'checked', false );
-						} else {
-							el.prop( 'checked', true );
-						}
+						// trigger input click
+						el.trigger( 'click' );
 						
 						// trigger change to ALL radio, checkboxes
 						// why? to set classes and values
