@@ -19,7 +19,8 @@
 			settings = $.extend( {}, defaults, settings );
 			return this.each( 
 				function() {
-					if ( $( this ).is(':radio, :checkbox') ) {
+					if ( $( this ).is(':radio, :checkbox') 
+					&& !$( this ).data( 'input' ) ) {
 						
 						// input
 						var input = {
