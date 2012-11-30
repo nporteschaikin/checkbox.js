@@ -28,7 +28,7 @@
 							name: $( this ).attr( 'name' ),
 							tabindex: $( this ).attr('tabindex'),
 							settings: settings,
-							id: $( this ).attr( 'id' )
+							ident: $( this ).attr( 'id' )
 						}
 						
 						// data
@@ -158,9 +158,9 @@
 		);
 		
 		// if input has ID, connect it's label 
-		if ( data.id.length > 0 ) {
+		if ( data.ident ) {
 			
-			var label = $( 'label[for="' + data.id + '"]' );
+			var label = $( 'label[for="' + data.ident + '"]' );
 			label.bind( 'click',
 				function(e) {
 					e.preventDefault();
